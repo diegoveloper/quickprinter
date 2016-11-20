@@ -92,7 +92,7 @@ If you want to get the printing result you should use  startActivityForResult in
             if (resultCode == RESULT_OK){
                 //Printing is ok
             } else {
-                if (data.hasExtra("errorMessage")) {
+                if (data != null) {
                     String errorMessage = data.getStringExtra("errorMessage");  
                     //Printing with error
                 }

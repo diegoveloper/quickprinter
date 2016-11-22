@@ -70,6 +70,7 @@ You can specify different printer commands in your sharing text to take advantag
  |`<LEFT>`| text aligned to the left
  |`<CENTER>`| text aligned to center
  |`<UNDERLINE>` | text with underline
+ |`<NORMAL>` | turn off bold and underline
  |`<LINE>`| A single line of text
  |`<DLINE>`| Double line of text
  |`<CUT>`| Cut the paper

@@ -101,6 +101,17 @@ If you want to get the printing result you should use  startActivityForResult in
         }
     }
  ``` 
+  
+* ### Printing on a specific printer by alias
+If you want to send the data to a specific printer (replacing printer selection), You can do following the snippet code 
+ ```java  
+        String data = "<PRINTER alias='your_printer_alias'> YOUR CUSTOM DATA <BR><CUT>"; 
+        Intent intent = new Intent();
+        intent.setAction(android.content.Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+  ``` 
  
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options

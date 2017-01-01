@@ -35,8 +35,8 @@ If you are a developer and want to integrate your Android application with 'Quic
 You can share plain text using shared Intents with the appropriate commands, below the simplest example.  
  ```java 
         String textToPrint = "Your text here"; 
-        Intent intent = new Intent(); 
-        intent.setAction(android.content.Intent.ACTION_SEND); 
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+         //intent.setAction(android.content.Intent.ACTION_SEND);  
         intent.setType("text/plain"); 
         intent.putExtra(android.content.Intent.EXTRA_TEXT,textToPrint); 
         startActivity(intent); 
@@ -51,8 +51,8 @@ You can specify different printer commands in your sharing text to take advantag
                 "string <SMALL> text<BR><LEFT>Left aligned<BR><CENTER>" +
                 "Center aligned<BR><UNDERLINE>underline text<BR><QR>12345678<BR>" +
                 "<CENTER>QR: 12345678<BR>Line<BR><LINE><BR>Double Line<BR><DLINE><BR><CUT>";  
-        Intent intent = new Intent();  
-        intent.setAction(android.content.Intent.ACTION_SEND);  
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+        //intent.setAction(android.content.Intent.ACTION_SEND);  
         intent.setType("text/plain");  
         intent.putExtra(android.content.Intent.EXTRA_TEXT,textToPrint);  
         startActivity(intent);  
@@ -82,8 +82,8 @@ You can specify different printer commands in your sharing text to take advantag
 * ### Getting the print result
 If you want to get the printing result you should use  startActivityForResult instead of startActivity, below is the sample code
  ```java  
-        Intent intent = new Intent();
-        intent.setAction(android.content.Intent.ACTION_SEND);
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+        //intent.setAction(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT,"your text to print here");
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
@@ -108,8 +108,8 @@ If you want to get the printing result you should use  startActivityForResult in
 If you want to send the data to a specific printer (replacing printer selection), You can do following the snippet code 
  ```java  
         String data = "<PRINTER alias='your_printer_alias'> YOUR CUSTOM DATA <BR><CUT>"; 
-        Intent intent = new Intent();
-        intent.setAction(android.content.Intent.ACTION_SEND);
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+       // intent.setAction(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
@@ -118,8 +118,8 @@ If you want to send the data to a specific printer (replacing printer selection)
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options
  ```java  
-        Intent intent = new Intent();
-        intent.setAction(android.content.Intent.ACTION_SEND);
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+        //intent.setAction(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT,etPrinterText.getText().toString());
         //premium features

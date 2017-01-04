@@ -114,6 +114,18 @@ If you want to send the data to a specific printer (replacing printer selection)
         intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
   ``` 
+  
+* ### Print from web
+You can print directly from your website using schemas, for example if you want to print the following commands: 
+ ```java  
+         String commands = "Text\n testing<br>this is a demo text <br><br><underline>prueba<br><bold>texto negrita<br><br> <br><cut>";
+  ``` 
+  You have to write this on your web page: 
+ ```html
+    <a href="quickprinter://Test
+     testing&lt;br&gt;this is a demo text &lt;br&gt;&lt;br&gt;&lt;underline&gt;prueba&lt;br&gt;&lt;bold&gt;texto negrita&lt;br&gt;&lt;br&gt; &lt;br&gt;&lt;cut&gt;">  Button Print</a>
+  ``` 
+  All you need to do is specify the quickprinter schema:// followed by the escaping data (html escape) you want to print.
  
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options

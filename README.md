@@ -118,14 +118,21 @@ If you want to send the data to a specific printer (replacing printer selection)
 * ### Print from web
 You can print directly from your website using schemas, for example if you want to print the following commands: 
  ```java  
-         String commands = "Text\n testing<br>this is a demo text <br><br><underline>prueba<br><bold>texto negrita<br><br> <br><cut>";
+         String commands = "test printer<br><big>Big title<br><cut>";
   ``` 
   You have to write this on your web page: 
  ```html
-    <a href="quickprinter://Test
-     testing&lt;br&gt;this is a demo text &lt;br&gt;&lt;br&gt;&lt;underline&gt;prueba&lt;br&gt;&lt;bold&gt;texto negrita&lt;br&gt;&lt;br&gt; &lt;br&gt;&lt;cut&gt;">  Button Print</a>
+    <script>
+function sendToQuickPrinter(){
+     var text = "test printer<br><big>Big title<br><cut>";
+     var textEncoded = encodeURI(text);
+     window.location.href="quickprinter://"+textEncoded;
+}
+</script>
+
+<a onclick="sendToQuickPrinter();">Print Button</a>
   ``` 
-  All you need to do is specify the quickprinter schema:// followed by the escaping data (html escape) you want to print.
+  All you need to do is specify the quickprinter schema:// followed by the encoded data (you could use encodeURI method from javascript) you want to print.
  
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options

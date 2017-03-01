@@ -133,6 +133,11 @@ function sendToQuickPrinter(){
 <a onclick="sendToQuickPrinter();">Print Button</a>
   ``` 
   All you need to do is specify the quickprinter schema:// followed by the encoded data (you could use encodeURI method from javascript) you want to print.
+  If you are using Apache Cordova and want to print from web, You must add this line on your config.xml file :  
+ ```html
+  <allow-intent href="quickprinter://*" />
+ ```
+
  
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options

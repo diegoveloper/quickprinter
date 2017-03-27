@@ -18,12 +18,12 @@ And if you're a developer, you can integrate your application in a super simple 
 ## __Usage__
 The steps for using the application will be detailed below:
 
-###__1. Download Quick Printer from the playstore [here](https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp "Quick Printer")__
+### __1. Download Quick Printer from the playstore [here](https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp "Quick Printer")__
     
   <center><img src="http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dpe.diegoveloper.printerserverapp&chs=180x180&choe=UTF-8&chld=L|0" width="200"></center>     
     Configure your printers using the Tutorial inside de app.
   
-###__2. Share Text from any application installed__  
+### __2. Share Text from any application installed__  
     When the application selection dialog appears, select 'Quick Printer'.  
     The selected text will be printed on your previously configured printer.
 
@@ -77,7 +77,20 @@ You can specify different printer commands in your sharing text to take advantag
  |`<LOGO>`| Print the logo configured on your printer
  |`<INVERSE>`| Turn on white/black reverse mode
  |`<DRAWER>` | Open the cash drawer connected to the printer
- |`<QR>your text` | Print a QR code of your text(premium feature)
+ |`<QR>your text<BR>` | Print a QR code of your text(premium feature)
+ |`<BARCODE128>your numbers<BR>` | Print a Barcode128 of your numbers(premium feature)
+ 
+ Some examples for Barcode and QR:
+  ```java  
+        //barcode128
+      String commands = "<center><BIG>hello barcode<br>Testing barcode<barcode128>5331698000418<br><cut>";
+      
+      //qr
+      String commands2 = "<center><BIG>hello qr<br>Testing barcode<QR>MyName10<br><cut>";
+        
+      
+ ``` 
+ 
  
 * ### Getting the print result
 If you want to get the printing result you should use  startActivityForResult instead of startActivity, below is the sample code

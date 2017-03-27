@@ -86,7 +86,7 @@ You can specify different printer commands in your sharing text to take advantag
       String commands = "<center><BIG>hello barcode<br>Testing barcode<barcode128>5331698000418<br><cut>";
       
       //qr
-      String commands2 = "<center><BIG>hello qr<br>Testing barcode<QR>MyName10<br><cut>";
+      String commands2 = "<center><BIG>hello qr<br>Testing qr<QR>MyName10<br><cut>";
         
       
  ``` 

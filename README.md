@@ -68,6 +68,7 @@ You can specify different printer commands in your sharing text to take advantag
  |`<BIG>`       | big text size
  |`<BOLD>` | bold text
  |`<LEFT>`| text aligned to the left
+ |`<RIGHT>`| text aligned to the right
  |`<CENTER>`| text aligned to center
  |`<UNDERLINE>` | text with underline
  |`<NORMAL>` | turn off bold and underline

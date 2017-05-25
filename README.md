@@ -80,6 +80,8 @@ You can specify different printer commands in your sharing text to take advantag
  |`<DRAWER>` | Open the cash drawer connected to the printer
  |`<QR>your text<BR>` | Print a QR code of your text(premium feature)
  |`<BARCODE128>your numbers<BR>` | Print a Barcode128 of your numbers(premium feature)
+ |`<IMAGE>http://url_of_image<BR>` | Print an Image from your URL (Default 200x200)
+ |`<IMAGEwXh>http://url_of_image<BR>` | Print an Image with custom size(w= width,h= height, eg: <IMAGE300x200>) from your URL (premium feature)
  
  Some examples for Barcode and QR:
   ```java  

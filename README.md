@@ -185,6 +185,9 @@ If you are suscribed to the 'Quick Printer' application, you can use this advanc
  |config_text_dialog | Text | Text of the Printing dialog| 
  
  __NOTE__: 'QR' command and these options are only availables for Premium Version. Free version print a message at the end of the ticket. 
+ 
+* ### Buy a big number of licenses or unlimited licenses
+    If you want to buy a big number of licenses and you don't want to your customers pay for them, please [contact me](mailto:diegoveloper@gmail.com).
 
 * ### Integrate Printer Driver directly in your code
  'Quick Printer' is an app that is using a library developed by me. If you want integrate the library directly in your project, please [contact me](mailto:diegoveloper@gmail.com). 

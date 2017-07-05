@@ -161,6 +161,7 @@ function sendToQuickPrinterChrome(){
  ```html
   <allow-intent href="quickprinter://*" />
  ```
+  Testing printer from your chrome browser (Open this link from your android phone) https://quickprinter-d2410.firebaseapp.com/
 
  
 * ### Advance options (Premium features)

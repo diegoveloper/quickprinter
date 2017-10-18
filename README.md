@@ -76,6 +76,7 @@ You can specify different printer commands in your sharing text to take advantag
  |`<DLINE>`| Double line of text
  |`<CUT>`| Cut the paper
  |`<LOGO>`| Print the logo configured on your printer
+ |`<LOGO2>`| (OPTIONAL for some printers) Print the logo configured on your printer
  |`<INVERSE>`| Turn on white/black reverse mode
  |`<DRAWER>` | Open the cash drawer connected to the printer
  |`<QR>your text<BR>` | Print a QR code of your text(premium feature)

@@ -196,7 +196,10 @@ If you are suscribed to the 'Quick Printer' application, you can use this advanc
 
 * ### Integrate Printer Driver directly in your code
  'Quick Printer' is an app that is using a library developed by me. If you want integrate the library directly in your project, please [contact me](mailto:diegoveloper@gmail.com). 
- 
+
+## __Demo Integration (Android Sample Project)__
+Link: https://github.com/diegoveloper/quickprinter-integration
+
 ## __Contact me__
  __Diego Velásquez López__ 
  

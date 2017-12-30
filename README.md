@@ -85,6 +85,7 @@ You can specify different printer commands in your sharing text to take advantag
  |`<QR-L>your text<BR>` | Print a QR (large  size)code of your text(premium feature)
  |`<BARCODE128>your numbers<BR>` | Print a Barcode128 of your numbers(premium feature)
  |`<IMAGE>http://url_of_image<BR>` | Print an Image from your URL (Default 200x200)
+ |`<IMAGE>file:///storage/emulated/0/Download/YourImage.png<BR>` | Print an Image from your Local File URL (Default 200x200)
  |`<IMAGEwXh>http://url_of_image<BR>` | Print an Image with custom size(w= width,h= height, e.g: `<IMAGE300x200>`) from your URL (premium feature)
  
  Some examples for Barcode and QR:

@@ -168,6 +168,15 @@ function sendToQuickPrinterChrome(){
  ```
   Testing printer from your chrome browser (Open this link from your android phone) https://quickprinter-d2410.firebaseapp.com/
 
+  
+* ### AppInventor Integration
+If you want to communicate AppInventor with QuickPrinter , you have to use these configuration: 
+ ```java  
+Action: pe.diegoveloper.printing
+DataType: text/plain
+ExtraKey: android.intent.extra.TEXT
+ExtraValue: your text to print
+  ``` 
  
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options

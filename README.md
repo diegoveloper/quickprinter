@@ -64,7 +64,10 @@ You can specify different printer commands in your sharing text to take advantag
  | Command  | Description|
  | ------------ |------------------------------------| 
  |`<BR>`       |  breakline|
- |`<SMALL>`       |  normal text size|
+ |`<SMALL>`       |  small text size|
+ |`<MEDIUM1>`       |  medium text size|
+ |`<MEDIUM2>`       |  medium text size|
+ |`<MEDIUM3>`       |  medium text size|
  |`<BIG>`       | big text size
  |`<BOLD>` | bold text
  |`<LEFT>`| text aligned to the left
@@ -74,6 +77,9 @@ You can specify different printer commands in your sharing text to take advantag
  |`<NORMAL>` | turn off bold and underline
  |`<LINE>`| A single line of text
  |`<DLINE>`| Double line of text
+ |`<LINE0>`| A single line of text without breakline 
+ |`<DLINE0>`| Double line of text without breakline
+ |`Table Mode`| Send your text separated by ;;  e.g: Header1;;Header2;;Header3<BR>Item1;;Item2;;Item3
  |`<CUT>`| Cut the paper
  |`<LOGO>`| Print the logo configured on your printer
  |`<LOGO2>`| (OPTIONAL for some printers) Print the logo configured on your printer

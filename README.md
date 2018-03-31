@@ -141,6 +141,15 @@ If you want to send the data to a specific printer (replacing printer selection)
         intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
   ``` 
+* ### Printing your receipt 'n' times
+If you want to print your receipt 'n' times, You can do following the snippet code 
+ ```java  
+        String data = "<PRINTER repeat='4'> YOUR CUSTOM DATA <BR><CUT>"; 
+        Intent intent = new Intent("pe.diegoveloper.printing");
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+  ```   
   
 * ### Print from web
 You can print directly from your website using schemas, for example if you want to print the following commands: 

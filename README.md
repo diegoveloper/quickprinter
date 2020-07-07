@@ -81,6 +81,7 @@ You can specify different printer commands in your sharing text to take advantag
  |`<DLINE0>`| Double line of text without breakline
  |`Table Mode`| Send your text separated by ;;  e.g: Header1;;Header2;;Header3<BR>Item1;;Item2;;Item3
  |`<CUT>`| Cut the paper
+ |`<AWAKE>`| Ping to the printer (Doesn't print anything, just awake the printer)
  |`<LOGO>`| Print the logo configured on your printer
  |`<LOGO2>`| (OPTIONAL for some printers) Print the logo configured on your printer
  |`<INVERSE>`| Turn on white/black reverse mode
@@ -141,6 +142,12 @@ If you want to send the data to a specific printer (replacing printer selection)
         intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
   ``` 
+  
+If you want to print the same commands on multiple printers, you can use multiple alias separated by `,`.
+ ```java  
+        String data = "<PRINTER alias='alias1, alias2, alias3'> YOUR CUSTOM DATA <BR><CUT>";   
+ ``` 
+  
 * ### Printing your receipt 'n' times
 If you want to print your receipt 'n' times, You can do following the snippet code 
  ```java  

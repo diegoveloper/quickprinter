@@ -26,6 +26,19 @@ The steps for using the application will be detailed below:
 ### __2. Share Text from any application installed__  
     When the application selection dialog appears, select 'Quick Printer'.  
     The selected text will be printed on your previously configured printer.
+    
+    
+## __NON Developers__
+If you are a user without knowledge of programming, you can use the app just sharing text, try sharing text from any app, like SMS, Whatsapp, Browser(copy the Text you need, NOT the URL), etc.
+
+- Select the Text
+
+ <center><img src="https://www.techadvisor.com/cmsdata/features/3789992/how-to-copy-and-paste-on-android-main2_thumb800.png" width="600"></center>     
+ 
+- Press SHARE
+- Select Quick Printer
+
+You can use any command from these list: https://github.com/diegoveloper/quickprinter#commands-supported
 
 
 ## __Developers__
@@ -86,6 +99,7 @@ You can specify different printer commands in your sharing text to take advantag
  |`<LOGO2>`| (OPTIONAL for some printers) Print the logo configured on your printer
  |`<INVERSE>`| Turn on white/black reverse mode
  |`<DRAWER>` | Open the cash drawer connected to the printer
+ |`<COMMAND>` | Use ESC/POS commands to print. Eg: <COMMAND>0x1B,0x40<BR> (premium feature)
  |`<QR>your text<BR>` | Print a QR code of your text(premium feature)
  |`<QR-S>your text<BR>` | Print a QR (small size) code of your text(premium feature)
  |`<QR-M>your text<BR>` | Print a QR (medium size)code of your text(premium feature)
@@ -147,8 +161,20 @@ If you want to print the same commands on multiple printers, you can use multipl
  ```java  
         String data = "<PRINTER alias='alias1, alias2, alias3'> YOUR CUSTOM DATA <BR><CUT>";   
  ``` 
+    
+* ### Printing on a specific printer by group
+We introduced groups, now you can add groups and assign it to any printer, so multiple printers can be part of a group (replacing printer selection), You can do following the snippet code 
+ ```java  
+        String data = "<PRINTER group='your_printer_group'>YOUR CUSTOM DATA <BR><CUT>"; 
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+       // intent.setAction(android.content.Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+```
   
 * ### Printing your receipt 'n' times
+    
 If you want to print your receipt 'n' times, You can do following the snippet code 
  ```java  
         String data = "<PRINTER repeat='4'> YOUR CUSTOM DATA <BR><CUT>"; 
@@ -157,6 +183,55 @@ If you want to print your receipt 'n' times, You can do following the snippet co
         intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
   ```   
+    
+* ### Another useful commands
+    
+If you want to receive some data from Quick Printer without prints anything, you can use these commands.
+    
+* #### Get the alias List   
+    
+ ```java  
+        String data = "<PRINTER alias_list>"; 
+        Intent intent = new Intent("pe.diegoveloper.printing");
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+  ```   
+    
+* #### Get the group List   
+    
+ ```java  
+        String data = "<PRINTER group_list>"; 
+        Intent intent = new Intent("pe.diegoveloper.printing");
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+  ```      
+    
+* #### Avoid printing Dialog   
+    
+ ```java  
+        String data = "<PRINTER avoid_dialog>"; 
+        Intent intent = new Intent("pe.diegoveloper.printing");
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+  ```   
+    
+* #### Avoid error dialog when the printer fails 
+    
+ ```java  
+        String data = "<PRINTER avoid_error_button>"; 
+        Intent intent = new Intent("pe.diegoveloper.printing");
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,data);
+        startActivityForResult(intent,YOUR_REQUEST_CODE);  
+  ```       
+ 
+Learn how to receive the data: https://github.com/diegoveloper/quickprinter#getting-the-print-result 
+
+    
+    
   
 * ### Print from web
 You can print directly from your website using schemas, for example if you want to print the following commands: 
@@ -231,6 +306,8 @@ If you are suscribed to the 'Quick Printer' application, you can use this advanc
 
 ## __Demo Integration (Android Sample Project)__
 Link: https://github.com/diegoveloper/quickprinter-integration
+        
+## __Download the latest version of Quick Printer [here](https://drive.google.com/file/d/1ioJur8CV9V0dkLQjFVRi9jkbE0nDsv3R/view?usp=sharing "Quick Printer Latest Version")__
 
 ## __Contact me__
  __Diego Velásquez López__ 

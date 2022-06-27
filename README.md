@@ -123,15 +123,24 @@ You can specify different printer commands in your sharing text to take advantag
  
 * ### Getting the print result
 If you want to get the printing result you should use  startActivityForResult instead of startActivity, below is the sample code
- ```java  
+
+## Old versions of Android
+
+Call the printer
+
+```java  
         Intent intent = new Intent("pe.diegoveloper.printing"); 
         //intent.setAction(android.content.Intent.ACTION_SEND);
         intent.setType("text/plain");
         intent.putExtra(android.content.Intent.EXTRA_TEXT,"your text to print here");
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
-        
-           @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+``` 
+ 
+Receive the data
+
+```java
+        @Override
+       protected void onActivityResult(int requestCode, int resultCode, Intent data) {
        // super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == YOUR_REQUEST_CODE){
             if (resultCode == RESULT_OK){
@@ -142,9 +151,41 @@ If you want to get the printing result you should use  startActivityForResult in
                     //Printing with error
                 }
             }
+          }
         }
-    }
+```
+
+## New versions of Android
+
+Call the printer
+        
+```java       
+        Intent intent = new Intent("pe.diegoveloper.printing"); 
+        intent.setType("text/plain");
+        intent.putExtra(android.content.Intent.EXTRA_TEXT,"your text to print here");
+        myActivityResultLauncher.launch(intent);
+       
  ``` 
+ 
+ Receive the data
+ 
+ ```java
+               
+            ActivityResultLauncher<Intent> myActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    //Printing is ok
+
+                } else {
+                    Intent data = result.getData();
+                    if (data != null) {
+                        String errorMessage = data.getStringExtra("errorMessage");
+                        //Printing with error
+                    }
+                }
+            });
+ ```           
   
 * ### Printing on a specific printer by alias
 If you want to send the data to a specific printer (replacing printer selection), You can do following the snippet code 

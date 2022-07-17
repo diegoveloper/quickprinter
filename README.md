@@ -225,7 +225,7 @@ If you want to print your receipt 'n' times, You can do following the snippet co
         startActivityForResult(intent,YOUR_REQUEST_CODE);  
   ```   
     
-* ### Another useful commands
+* ### Other useful commands
     
 If you want to receive some data from Quick Printer without prints anything, you can use these commands.
     

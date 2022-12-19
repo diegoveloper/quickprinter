@@ -308,13 +308,27 @@ function sendToQuickPrinterChrome(){
 
   
 * ### AppInventor Integration
-If you want to communicate AppInventor with QuickPrinter , you have to use these configuration: 
- ```java  
+If you want to communicate AppInventor with QuickPrinter , you have to use these configuration:
+  ```java  
 Action: pe.diegoveloper.printing
 DataType: text/plain
 ExtraKey: android.intent.extra.TEXT
 ExtraValue: your text to print
+``` 
+        
+* ### Flutter Integration
+If you want to communicate Flutter with QuickPrinter , you can use this plugin https://pub.dev/packages/android_intent_plus and these configuration: 
+        
+```dart  
+  AndroidIntent intent = const AndroidIntent(
+                               action: 'pe.diegoveloper.printing',
+                               type: 'text/plain',
+                               arguments: {
+                                  "android.intent.extra.TEXT": "test printer<br><big>Big title<br><cut>",
+                                });
+  await intent.launch();
   ``` 
+
  
 * ### Advance options (Premium features)
 If you are suscribed to the 'Quick Printer' application, you can use this advanced options

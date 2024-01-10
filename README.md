@@ -1,6 +1,10 @@
 # Quick Printer
 ## Android POS Printer (ESC/POS)
 > Created for the purpose of serving as a channel among other applications that require printing data on receipt printers using ESC/POS commands.
+>
+> 
+## Installation
+If you can't download/install the app from Google Play https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp , try using this link: https://apkpure.net/es/quick-printer-esc-pos-print/pe.diegoveloper.printerserverapp
 
 ## __Introduction__
 Quick printer is an Android application that allows you to add and configure receipt printers (POS printers) through different connection types:

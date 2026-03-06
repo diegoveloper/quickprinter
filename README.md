@@ -3,9 +3,6 @@
 > Created for the purpose of serving as a channel among other applications that require printing data on receipt printers using ESC/POS commands.
 >
 > 
-## Installation
-If you can't download/install the app from Google Play https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp , try using this link: https://drive.google.com/file/d/1EV-zXiyY6yKmbPfTBCYU4MCDjwKQth8Y/view?usp=sharing
-
 ## __Introduction__
 Quick printer is an Android application that allows you to add and configure receipt printers (POS printers) through different connection types:
 - Wifi local network
@@ -22,10 +19,25 @@ And if you're a developer, you can integrate your application in a super simple 
 ## __Usage__
 The steps for using the application will be detailed below:
 
-### __1. Download Quick Printer from the playstore [here](https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp "Quick Printer")__
-    
-  <center><img src="quickprinter_qr.png" width="200"></center>     
-    Configure your printers using the Tutorial inside de app.
+### 1. Download Quick Printer from the Play Store
+
+Download the app from the Play Store:
+
+👉 **[Quick Printer on Google Play](https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp "Quick Printer")**
+
+<p align="center">
+  <img src="quickprinter_qr.png" width="200" alt="Quick Printer QR Code">
+</p>
+
+Once installed, open the app and configure your printers using the tutorial available inside the app.
+
+---
+
+### Alternative Download
+
+You can also download the latest APK directly from this repository:
+
+👉 **[Download the latest APK](quickprinter.apk)**
   
 ### __2. Share Text from any application installed__  
     When the application selection dialog appears, select 'Quick Printer'.  

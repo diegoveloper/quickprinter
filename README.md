@@ -24,7 +24,7 @@ The steps for using the application will be detailed below:
 
 ### __1. Download Quick Printer from the playstore [here](https://play.google.com/store/apps/details?id=pe.diegoveloper.printerserverapp "Quick Printer")__
     
-  <center><img src="http://www.qr-code-generator.com/phpqrcode/getCode.php?cht=qr&chl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dpe.diegoveloper.printerserverapp&chs=180x180&choe=UTF-8&chld=L|0" width="200"></center>     
+  <center><img src="quickprinter_qr.png" width="200"></center>     
     Configure your printers using the Tutorial inside de app.
   
 ### __2. Share Text from any application installed__  

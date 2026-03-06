@@ -37,7 +37,7 @@ Once installed, open the app and configure your printers using the tutorial avai
 
 You can also download the latest APK directly from this repository:
 
-👉 **[Download the latest APK](quickprinter.apk)**
+👉 **[Download the latest APK](https://raw.githubusercontent.com/diegoveloper/quickprinter/main/quickprinter.apk)**
   
 ### __2. Share Text from any application installed__  
     When the application selection dialog appears, select 'Quick Printer'.  
